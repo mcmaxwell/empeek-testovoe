@@ -1,0 +1,22 @@
+.sidebar {
+  width: 271px;
+  min-width: 271px;
+  background-color: #2b2f3e;
+  height: 100%;
+  padding: 23px 27px;
+
+  .logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 36px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    display: block;
+    color: #808080;
+    font-size: 18px;
+    margin: 10px 0;
+  }
+}
