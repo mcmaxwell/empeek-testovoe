@@ -9,7 +9,7 @@ const Comments = ({comments, id, setComment, index}) => (
       { (comments) ?
           comments.map((val, index) =>
              <div className="comments__item" key={index}>
-               <div className="comments__item-avatar" style={{background:'#ff8a00'}}></div>
+               <div className="comments__item-avatar"></div>
                <div className="comments__item-text">
                  {val}
                </div>

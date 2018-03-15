@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Button from './Button'
+import Button from '../Button'
 
 const AddComment = ({setComment, idItem}) => {
   let textarea
@@ -15,7 +15,7 @@ const AddComment = ({setComment, idItem}) => {
     }
   }
 
-  function sendKeyComment (e) {
+  function sendKeyComment (e) {    
     ((e.keyCode == 10 || e.keyCode == 13) && (e.ctrlKey || e.metaKey)) ?
       sendComment(e) :
         null

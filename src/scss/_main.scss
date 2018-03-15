@@ -4,7 +4,8 @@ body, html {
   height: 100%;
 }
 
-body {
+body,
+button, input, optgroup, select, textarea {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -58,7 +59,7 @@ input {
 }
 
 .btn {
-  padding: 8px 34px 7px;
+  padding: 8px 24px 7px;
   border-radius: 3px;
   font-size: 16px;
   transition: .3s;
@@ -74,6 +75,7 @@ input {
     font-weight: 700;
     text-align: center;
     cursor: pointer;
+    padding: 8px 32px 7px;
   }
 
   &-remove {
@@ -87,6 +89,6 @@ input {
   color: #fff;
   border-radius: 18px;
   font-size : 13px;
-  line-height : 18px;
+  line-height : 14px;
   padding: 4px 9px;
 }

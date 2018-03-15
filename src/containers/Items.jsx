@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import ItemsList from '../components/ItemsList';
+import ItemsList from '../components/main/ItemsList';
 import addItemAction from '../action/actionAddItem'
 import removeItemAction from '../action/actionRemoveItem'
 import choiceItemAction from '../action/actionChoiceItem'
 import addCommentAction from '../action/actionAddComment'
 import { connect } from "react-redux"
-import Comments from '../components/Comments'
+import Comments from '../components/main/Comments'
 
 class App extends Component {
   render() {

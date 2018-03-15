@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './Button'
+import Button from '../Button'
 import Item from './Item'
 import AddItem from './AddItem'
 
