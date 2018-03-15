@@ -1,9 +1,9 @@
-let nextTodoId = 0
+import { v4 } from 'node-uuid'
 
 export default function addItemAction(name) {
   return {
     type: 'ADD_ITEM',
-    id: nextTodoId++,
+    id: v4(),
     payload: name
   }
 }

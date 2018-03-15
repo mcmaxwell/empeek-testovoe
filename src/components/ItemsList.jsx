@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types'
 import Button from './Button'
 import Item from './Item'
 import AddItem from './AddItem'
@@ -18,6 +17,7 @@ class ItemsList extends React.Component {
                 {...val}
                 badge={val.masseges.length}
                 onClick={() => this.props.choiceItem(val.id)}
+                removeItem={() => this.props.removeItem(val.id)}
                />
             )
           }

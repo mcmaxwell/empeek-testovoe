@@ -1,34 +1,31 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types'
+import AddComment from './AddComment'
 
-const Comments = () => (
+const Comments = ({comments, id, setComment, index}) => (
   <div className="main__block comments">
-    <h2>Comments #2</h2>
+    <h2>Comments #{index + 1}</h2>
     <div className="comments__list">
-      <div className="comments__item">
-        <div className="comments__item-avatar" style={{background:'#ff8a00'}}></div>
-        <div className="comments__item-text">
-          A variation of the ordinary lorem ipsum text has been used in typesetting since the 1960s or earlier, when it was popularized by advertisements for Letraset transfer sheets. It was introduced to the Information Age in the mid-1980s
-        </div>
-      </div>
-      <div className="comments__item">
-        <div className="comments__item-avatar" style={{background:'#47568c'}}></div>
-        <div className="comments__item-text">
-          A variation of the ordinary lorem ipsum text has been used in typesetting since the 1960s or earlier, when it was popularized by advertisements for Letraset transfer sheets. It was introduced to the Information Age in the mid-1980s
-        </div>
-      </div>
-      <div className="comments__item">
-        <div className="comments__item-avatar" style={{background:'#ff8a00'}}></div>
-        <div className="comments__item-text">
-          A variation of the ordinary lorem ipsum text has been used in typesetting since the 1960s or earlier, when it was popularized by advertisements for Letraset transfer sheets. It was introduced to the Information Age in the mid-1980s
-        </div>
-      </div>
+      { (comments) ?
+          comments.map((val, index) =>
+             <div className="comments__item" key={index}>
+               <div className="comments__item-avatar" style={{background:'#ff8a00'}}></div>
+               <div className="comments__item-text">
+                 {val}
+               </div>
+             </div>
+          ) : null
+      }
     </div>
-    <div className="comments__form">
-      <div className="comments__item-avatar" style={{background:'#e6e6e6'}}></div>
-      <textarea className="comments__input"></textarea>
-    </div>
+    <AddComment setComment={setComment} idItem={id} />
   </div>
 );
+
+Comments.propTypes = {
+  setComment: PropTypes.func.isRequired,
+  index: PropTypes.number.isRequired,
+  comments: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired
+}
 
 export default Comments;
